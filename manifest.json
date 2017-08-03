@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+
+    "name": "ChessGoblin",
+    "description": "Parse chess sites and let chess engines move for you",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "index.html"
+
+    },
+    "content_scripts": [ {
+        "matches":["*://*.lichess.org/*"],
+        "js":["jquery-3.2.1.min.js"]
+
+
+    }],
+    "permissions": [
+        "activeTab",
+        "https://ajax.googleapis.com/",
+        "tabs", "<all_urls>"
+    ]
+}
